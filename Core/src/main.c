@@ -76,7 +76,7 @@ DMA_HandleTypeDef hdma_spi1_tx;
 
 /* ===================== Battery measurement (10k:10k divider) ===================== */
 #define ADC_MAX 4095.0f
-#define VDDA 3.300f   // <- replace with your measured value, e.g. 3.24f or 3.27f
+#define VDDA 3.300f   /
 #define R_TOP_OHM 10000.0f
 #define R_BOTTOM_OHM 10000.0f
 #define DIV_GAIN ((R_TOP_OHM + R_BOTTOM_OHM) / R_BOTTOM_OHM) // = 2.0 with 10k:10k
@@ -967,4 +967,5 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
 
