@@ -515,7 +515,6 @@ int main(void)
           detectPulse(ir);
       }
 
-      // Do NOT clear FIFO every loop; only clear once at init or when you overflow
 
       float tempC = TMP117_ReadTemp_Sync(1200);      // wait up to one 1 Hz cycle
       float v_bat = ReadVBat_V();
@@ -967,5 +966,6 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
 
 
