@@ -396,7 +396,7 @@ static float ReadVBat_V(void)
         HAL_ADC_Stop(&hadc1);
     }
     float raw   = (float)(sum / NUM_SAMPLES);
-    float v_adc = (raw / ADC_MAX) * VDDA  +0.05f ;// voltage at ADC pin
+    float v_adc = (raw / ADC_MAX) * VDDA   ;// voltage at ADC pin
     float v_bat = v_adc * DIV_GAIN;         // back to pack voltage
     return v_bat;
 }
@@ -517,7 +517,7 @@ int main(void)
 
       // Do NOT clear FIFO every loop; only clear once at init or when you overflow
 
-      float tempC = TMP117_ReadTemp_Sync(1200)+5;      // wait up to one 1 Hz cycle
+      float tempC = TMP117_ReadTemp_Sync(1200);      // wait up to one 1 Hz cycle
       float v_bat = ReadVBat_V();
       static float filtered_vbat = -1.0f;
 
@@ -967,3 +967,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
