@@ -33,7 +33,7 @@ A compact wrist-watch demo on **STM32** that measures **heart rate** (MAX30102),
 ---
 
 ## On-screen UI
-![Alt text](image.png)
+![Alt text](image.jpeg)
 
 ```
 BPM:    xx.x
