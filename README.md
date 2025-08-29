@@ -1,13 +1,12 @@
 # STM32 Wearable: Heart-Rate + Temperature Watch (GC9A01)
 
 A compact wrist-watch demo on **STM32** that measures **heart rate** (MAX30102), **skin temperature** (TMP117), keeps **time** with the RTC, shows data on a **GC9A01 round LCD**, monitors **battery**, supports a **user button**, and gives **haptic alerts** via a **vibration motor**.
-No Bluetooth/UART comms are used.
 
 ---
 
 ## Features
 
-* **Heart Rate (PPG):** MAX30102 on I²C — simple peak detection with rolling-average **BPM**.
+* **Heart Rate (PPG):** MAX30102 on I2C — simple peak detection with rolling-average **BPM**.
 * **Temperature:** TMP117 on I²C (address `0x48`) — calibrated **°C** directly, continuous 1 Hz mode.
 * **Timekeeping:** STM32 **RTC** running from **LSE** (32.768 kHz) for date/time.
 * **Display:** GC9A01 240×240 round LCD over **SPI1 + DMA** (8×16 font).
@@ -23,7 +22,6 @@ No Bluetooth/UART comms are used.
 2. **Peripherals enabled:** `ADC1`, `I2C1`, `I2C2`, `SPI1` (DMA TX), `RTC`, needed GPIOs.
 3. **Clock:** HSE → PLL ×8; RTC clock = **LSE** (see `SystemClock_Config()` and `MX_RTC_Init()`).
 4. **Wire sensors:**
-
    * **MAX30102** → `I2C1` (SCL/SDA, 3V3, GND).
    * **TMP117**  → `I2C2` (SCL/SDA, 3V3, GND), address `0x48`.
    * **GC9A01**  → `SPI1` (SCK/MOSI) + **CS/DC/RST/BLK** GPIOs.
@@ -35,6 +33,7 @@ No Bluetooth/UART comms are used.
 ---
 
 ## On-screen UI
+![Alt text](image.png)
 
 ```
 BPM:    xx.x
@@ -79,13 +78,6 @@ Alerts replace the UI with big text (e.g., “TEMP TOO HIGH!”). Press the butt
 
 ---
 
-## Notes
-
-* The BPM detector is intentionally simple (peak-based). For motion robustness, consider adaptive filters and more advanced PPG algorithms.
-* Ensure proper **level shifting/power limits** for the LCD and sensors (3.3 V domain).
-* Drive the vibration motor via a **transistor + diode**; do not connect the motor directly to a GPIO.
-
----
 
 ## License & Credits
 
