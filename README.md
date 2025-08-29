@@ -1,4 +1,3 @@
-# wristwatch
 # STM32 Wearable: Heart-Rate + Temperature Watch (GC9A01)
 
 A compact wrist-watch demo on **STM32** that measures **heart rate** (MAX30102), **skin temperature** (TMP117), keeps **time** with the RTC, shows data on a **GC9A01 round LCD**, monitors **battery**, supports a **user button**, and gives **haptic alerts** via a **vibration motor**.
