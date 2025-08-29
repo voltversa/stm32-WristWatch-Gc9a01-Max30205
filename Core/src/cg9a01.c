@@ -1,8 +1,8 @@
-/*
- *
- *  Created on: 05/4/2025
- *  Author: MOSTAFA
- */
+  ******************************************************************************
+  * Author        : VoltVersa
+  * Institution   : Thomas More 2025
+  ******************************************************************************
+
 
 #include "cg9a01.h"
 #include "main.h"
@@ -518,4 +518,5 @@ void ClearWindow(unsigned int startX, unsigned int startY, unsigned int endX, un
          x += 8; // still 8 pixels wide
      }
  }
+
 
