@@ -15,6 +15,8 @@ A compact wrist-watch demo on **STM32** that measures **heart rate** (MAX30102),
 * **User Button:** Debounced; **press = ACK alert (snooze 2 min)**, otherwise **toggle backlight**.
 
 ---
+## Schematic
+[Open the PDF](Schematic.pdf)
 
 ## Quick Start
 
