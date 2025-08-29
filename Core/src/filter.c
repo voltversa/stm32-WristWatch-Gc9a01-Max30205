@@ -1,13 +1,13 @@
 /*
  * filter.c
  *
- *  Created on: Jan 29, 2022
- *      Author: Mario Regus
- *
- *  Note: Contains code adapted from Raivis Strogonivs
- *  https://morf.lv/implementing-pulse-oximeter-using-max30100
- *  https://github.com/xcoder123/MAX30100
- */
+ *  Created on: Jan 29, 2025
+  ******************************************************************************
+  * Author        : VoltVersa
+  * Institution   : Thomas More 2025
+  ******************************************************************************
+*/
+ 
 
 #include "filter.h"
 
