@@ -16,7 +16,7 @@ A compact wrist-watch demo on **STM32** that measures **heart rate** (MAX30102),
 
 ---
 ## Schematic
-[Open the PDF](Schematic.pdf)
+[Open the PDF](schematic.pdf)
 
 ## Quick Start
 
